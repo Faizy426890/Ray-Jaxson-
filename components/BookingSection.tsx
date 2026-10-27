@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Mail, Instagram, Youtube, Music, Send, CheckCircle, AlertCircle, Loader, User } from 'lucide-react'
+import { Mail, Instagram, Music, Send, CheckCircle, AlertCircle, Loader, User } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Reveal from './Reveal'
 
@@ -10,9 +10,9 @@ const EVENT_TYPES = ['Venue', 'Bar / Pub', 'Festival', 'Private Event', 'College
 const BUDGETS = ['Under $250', '$250–500', '$500–1,000', '$1,000–2,500', '$2,500–5,000', '$5,000+']
 const LENGTHS = ['30 Minutes', '45 Minutes', '60 Minutes', '90+ Minutes']
 
-const SPOTIFY = 'https://open.spotify.com/artist/7k9mgUyBa834ecy9zkKHHT'
-const YOUTUBE = 'https://youtube.com/channel/UCaWb0_TsRAJIVJ7NXafWxBQ?si=QH25JMgWD6xZ0mt2'
-const INSTAGRAM = 'https://instagram.com/kalmsyc1deep'
+const SPOTIFY = 'https://open.spotify.com/artist/1Ixmx7vcuZ8hGyrRUslzhx?si=nSPwq2knRdSF-QkzO8umOQ'
+const INSTAGRAM = 'https://instagram.com/official.shatterlyfe'
+const TIKTOK = 'https://tiktok.com/@shatter_lyfe'
 
 const EMPTY = {
   fullName: '', email: '', phone: '', org: '',
@@ -51,7 +51,7 @@ export default function BookingSection() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, subject: `Booking Request — ${form.fullName}` }),
+        body: JSON.stringify({ ...form, subject: `$hatterLyfé Booking Request — ${form.fullName}` }),
       })
       if (!res.ok) throw new Error()
       setStatus('success')
@@ -62,12 +62,12 @@ export default function BookingSection() {
   }
 
   return (
-    <section id="booking" style={{ padding: '80px 0', background: 'linear-gradient(135deg, var(--bg-2) 0%, var(--bg-deep) 100%)' }}>
+    <section id="booking" style={{ padding: '100px 0', background: 'linear-gradient(135deg, var(--bg-2) 0%, var(--bg-deep) 100%)' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px' }}>
 
-        <div style={{ textAlign: 'center', marginBottom: 44 }}>
+        <div style={{ textAlign: 'center', marginBottom: 52 }}>
           <Reveal direction="up">
-            <span className="section-pill" style={{ display: 'inline-flex', marginBottom: 12 }}>📅 Booking</span>
+            <span className="section-pill" style={{ display: 'inline-flex', marginBottom: 12 }}>📅 Book $hatterLyfé</span>
           </Reveal>
           <Reveal direction="up" delay={0.1}>
             <h2 className="font-syne" style={{ fontWeight: 900, fontSize: 'clamp(1.8rem,3vw,2.6rem)', lineHeight: 1.1, marginBottom: 10 }}>
@@ -76,7 +76,7 @@ export default function BookingSection() {
           </Reveal>
           <Reveal direction="up" delay={0.15}>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', maxWidth: 540, margin: '0 auto', lineHeight: 1.7 }}>
-              Tell us about your event and Kalm Before the Storm will be in touch.
+              Tell Jaxson about your event and $hatterLyfé will be in touch. Melodic rap, real energy, unforgettable performance.
             </p>
           </Reveal>
         </div>
@@ -87,18 +87,17 @@ export default function BookingSection() {
           <div>
             <Reveal direction="right">
               <div className="glass" style={{ borderRadius: 22, padding: 28, marginBottom: 20 }}>
-                <h3 className="font-syne" style={{ fontWeight: 800, fontSize: '1.1rem', marginBottom: 4 }}>Kalm Before the Storm</h3>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.82rem', marginBottom: 20 }}>Real Name: K Carlton Allen</p>
+                <h3 className="font-syne" style={{ fontWeight: 800, fontSize: '1.1rem', marginBottom: 4 }}>$hatterLyfé</h3>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.82rem', marginBottom: 20 }}>Jaxson · Portland, Oregon · Melodic Rap</p>
 
                 {[
-                  { icon: <Mail size={18} />, label: 'Email', val: <a href="mailto:kcsallen@gmail.com" style={{ color: 'var(--accent-2)' }}>kcsallen@gmail.com</a> },
-                  { icon: <Mail size={18} />, label: 'Email', val: <a href="mailto:kalmsyc1deep@gmail.com" style={{ color: 'var(--accent-2)' }}>kalmsyc1deep@gmail.com</a> },
-                  { icon: <Instagram size={18} />, label: 'Instagram', val: <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-2)' }}>@kalmsyc1deep</a> },
-                  { icon: <Music size={18} />, label: 'Spotify', val: <a href={SPOTIFY} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-2)' }}>Kalm Before the Storm</a> },
-                  { icon: <Youtube size={18} />, label: 'YouTube', val: <a href={YOUTUBE} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-2)' }}>Kalm Before the Storm</a> },
+                  { icon: <Mail size={18} />, label: 'Email', val: <a href="mailto:shatterlyfemusic@gmail.com" style={{ color: 'var(--accent-2)' }}>shatterlyfemusic@gmail.com</a> },
+                  { icon: <Instagram size={18} />, label: 'Instagram', val: <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-2)' }}>@official.shatterlyfe</a> },
+                  { icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style={{display:'block'}}><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.2 8.2 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>, label: 'TikTok', val: <a href={TIKTOK} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-2)' }}>@shatter_lyfe</a> },
+                  { icon: <Music size={18} />, label: 'Spotify', val: <a href={SPOTIFY} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-2)' }}>$hatterLyfé</a> },
                 ].map((item, i) => (
                   <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 16 }}>
-                    <div style={{ width: 42, height: 42, background: 'rgba(59,130,246,0.12)', border: '1px solid rgba(59,130,246,0.25)', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: 'var(--accent-2)' }}>
+                    <div style={{ width: 42, height: 42, background: 'rgba(139,92,246,0.12)', border: '1px solid rgba(139,92,246,0.25)', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: 'var(--accent-2)' }}>
                       {item.icon}
                     </div>
                     <div>
@@ -113,7 +112,7 @@ export default function BookingSection() {
               <div className="glass" style={{ borderRadius: 22, padding: 24, display: 'flex', gap: 14, alignItems: 'center' }}>
                 <User size={22} color="var(--accent-2)" style={{ flexShrink: 0 }} />
                 <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>
-                  Venues, bars, festivals, colleges, corporate & private events welcome.
+                  Venues, bars, festivals, colleges, corporate & private events — Jaxson brings real energy to every stage.
                 </p>
               </div>
             </Reveal>
@@ -122,7 +121,8 @@ export default function BookingSection() {
           {/* ── Right — booking form ── */}
           <Reveal direction="left" delay={0.1}>
             <div className="glass" style={{ borderRadius: 24, padding: 40, position: 'relative', overflow: 'hidden' }}>
-              <div style={{ position: 'absolute', top: -80, right: -80, width: 280, height: 280, borderRadius: '50%', background: 'radial-gradient(circle, rgba(59,130,246,0.10) 0%, transparent 70%)', pointerEvents: 'none' }} />
+              <div style={{ position: 'absolute', top: -80, right: -80, width: 280, height: 280, borderRadius: '50%', background: 'radial-gradient(circle, rgba(139,92,246,0.12) 0%, transparent 70%)', pointerEvents: 'none' }} />
+              <div style={{ position: 'absolute', bottom: -60, left: -60, width: 200, height: 200, borderRadius: '50%', background: 'radial-gradient(circle, rgba(236,72,153,0.08) 0%, transparent 70%)', pointerEvents: 'none' }} />
 
               <AnimatePresence mode="wait">
                 {status === 'success' ? (
@@ -136,15 +136,15 @@ export default function BookingSection() {
                   >
                     <div style={{
                       width: 72, height: 72, borderRadius: '50%',
-                      background: 'rgba(59,130,246,0.12)', border: '2px solid rgba(59,130,246,0.4)',
+                      background: 'rgba(139,92,246,0.15)', border: '2px solid rgba(139,92,246,0.4)',
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      margin: '0 auto 24px', boxShadow: '0 0 40px rgba(59,130,246,0.25)',
+                      margin: '0 auto 24px', boxShadow: '0 0 40px rgba(139,92,246,0.3)',
                     }}>
                       <CheckCircle size={32} color="var(--accent-2)" />
                     </div>
                     <h3 className="font-syne" style={{ fontWeight: 900, fontSize: '1.4rem', marginBottom: 12 }}>Request Sent</h3>
                     <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.7, marginBottom: 32 }}>
-                      Thanks for reaching out.<br />Kalm Before the Storm will get back to you soon.
+                      Thanks for reaching out.<br />$hatterLyfé (Jaxson) will get back to you soon.
                     </p>
                     <button onClick={() => setStatus('idle')} className="btn-sm-purple" style={{ margin: '0 auto' }}>
                       Send Another
@@ -166,7 +166,6 @@ export default function BookingSection() {
                       <p style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>Fields marked * are required.</p>
                     </div>
 
-                    {/* Contact */}
                     <div className="bk-2" style={{ marginBottom: 14 }}>
                       <Float label="Full Name *" value={form.fullName} onChange={set('fullName')} error={errors.fullName} />
                       <Float label="Email Address *" type="email" value={form.email} onChange={set('email')} error={errors.email} />
@@ -176,7 +175,6 @@ export default function BookingSection() {
                       <Float label="Venue / Organization Name" value={form.org} onChange={set('org')} />
                     </div>
 
-                    {/* Event type */}
                     <div style={{ marginBottom: 20 }}>
                       <Label text="Event Type *" />
                       <Select value={form.eventType} onChange={set('eventType')} options={EVENT_TYPES} error={errors.eventType} placeholder="Select event type" />
@@ -219,7 +217,7 @@ export default function BookingSection() {
                         >
                           <AlertCircle size={16} style={{ flexShrink: 0 }} />
                           {status === 'error'
-                            ? 'Something went wrong. Please try again or email directly.'
+                            ? 'Something went wrong. Please try again or email shatterlyfemusic@gmail.com directly.'
                             : 'Please complete the required fields marked *.'}
                         </motion.div>
                       )}
@@ -240,7 +238,7 @@ export default function BookingSection() {
 
                     <p style={{ fontSize: '0.72rem', color: 'var(--text-dim)', textAlign: 'center', marginTop: 14 }}>
                       Or email directly at{' '}
-                      <a href="mailto:kcsallen@gmail.com" style={{ color: 'var(--accent-2)', textDecoration: 'none' }}>kcsallen@gmail.com</a>
+                      <a href="mailto:shatterlyfemusic@gmail.com" style={{ color: 'var(--accent-2)', textDecoration: 'none' }}>shatterlyfemusic@gmail.com</a>
                     </p>
                   </motion.form>
                 )}
@@ -262,7 +260,6 @@ export default function BookingSection() {
   )
 }
 
-/* ── Floating-label text field ── */
 function Float({ label, value, onChange, type = 'text', error }: {
   label: string; value: string; onChange: (e: React.ChangeEvent<HTMLInputElement>) => void; type?: string; error?: boolean
 }) {
@@ -301,8 +298,8 @@ function Select({ value, onChange, options, placeholder, error }: {
   return (
     <div style={{ position: 'relative' }}>
       <select value={value} onChange={onChange} style={{ ...inputStyle(error), paddingRight: 40, cursor: 'pointer', color: value ? '#fff' : 'var(--text-dim)' }}>
-        <option value="" style={{ background: '#0d1830' }}>{placeholder}</option>
-        {options.map(o => <option key={o} value={o} style={{ background: '#0d1830', color: '#fff' }}>{o}</option>)}
+        <option value="" style={{ background: '#0D0B1A' }}>{placeholder}</option>
+        {options.map(o => <option key={o} value={o} style={{ background: '#0D0B1A', color: '#fff' }}>{o}</option>)}
       </select>
       <span style={{ position: 'absolute', right: 14, top: '50%', transform: 'translateY(-50%)', color: 'var(--text-dim)', pointerEvents: 'none', fontSize: '0.7rem' }}>▼</span>
     </div>
@@ -312,8 +309,8 @@ function Select({ value, onChange, options, placeholder, error }: {
 function inputStyle(error?: boolean): React.CSSProperties {
   return {
     width: '100%',
-    background: 'rgba(9,20,38,0.6)',
-    border: `1px solid ${error ? 'rgba(245,158,11,0.7)' : 'rgba(255,255,255,0.08)'}`,
+    background: 'rgba(13,11,26,0.7)',
+    border: `1px solid ${error ? 'rgba(245,158,11,0.7)' : 'rgba(139,92,246,0.15)'}`,
     boxShadow: error ? '0 0 0 3px rgba(245,158,11,0.12)' : 'none',
     color: '#fff',
     borderRadius: 12,

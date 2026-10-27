@@ -1,16 +1,16 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, CloudLightning, ExternalLink } from 'lucide-react'
+import { Menu, X, Music, ExternalLink } from 'lucide-react'
 
-const SPOTIFY = 'https://open.spotify.com/artist/7k9mgUyBa834ecy9zkKHHT'
+const SPOTIFY = 'https://open.spotify.com/artist/1Ixmx7vcuZ8hGyrRUslzhx?si=nSPwq2knRdSF-QkzO8umOQ'
 
 const NAV_LINKS = [
   { label: 'Music',    href: '#music' },
-  { label: 'About',    href: '#about' },
+  { label: 'Story',    href: '#about' },
+  { label: 'Journey',  href: '#timeline' },
   { label: 'Themes',   href: '#themes' },
-  { label: 'Timeline', href: '#timeline' },
-  { label: 'Videos',   href: '#videos' },
+  { label: 'Connect',  href: '#social' },
   { label: 'Booking',  href: '#booking' },
 ]
 
@@ -38,10 +38,10 @@ export default function Navbar() {
         style={{
           position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
           height: 68,
-          background: scrolled ? 'rgba(5,11,24,0.85)' : 'transparent',
+          background: scrolled ? 'rgba(8,8,18,0.88)' : 'transparent',
           backdropFilter: scrolled ? 'blur(24px)' : 'none',
-          borderBottom: scrolled ? '1px solid rgba(59,130,246,0.18)' : '1px solid transparent',
-          boxShadow: scrolled ? '0 4px 40px rgba(0,0,0,0.6)' : 'none',
+          borderBottom: scrolled ? '1px solid rgba(139,92,246,0.18)' : '1px solid transparent',
+          boxShadow: scrolled ? '0 4px 40px rgba(0,0,0,0.7)' : 'none',
           transition: 'all 0.3s',
           display: 'flex', alignItems: 'center',
         }}
@@ -60,14 +60,15 @@ export default function Navbar() {
             }}
           >
             <span style={{
-              width: 32, height: 32, background: 'var(--accent)',
+              width: 32, height: 32,
+              background: 'linear-gradient(135deg, #8B5CF6, #EC4899)',
               borderRadius: 9, display: 'flex', alignItems: 'center', justifyContent: 'center',
-              boxShadow: '0 4px 16px rgba(59,130,246,0.4)', flexShrink: 0,
+              boxShadow: '0 4px 16px rgba(139,92,246,0.5)', flexShrink: 0,
             }}>
-              <CloudLightning size={16} color="#fff" />
+              <Music size={15} color="#fff" />
             </span>
-            <span style={{ whiteSpace: 'nowrap' }}>Kalm</span>
-            <span className="logo-full" style={{ color: 'var(--accent-2)', whiteSpace: 'nowrap' }}>Before the Storm</span>
+            <span style={{ whiteSpace: 'nowrap' }}>$hatter</span>
+            <span className="logo-full" style={{ color: 'var(--accent-2)', whiteSpace: 'nowrap' }}>Lyfé</span>
           </button>
 
           {/* Desktop links */}
@@ -94,7 +95,7 @@ export default function Navbar() {
           {/* CTA */}
           <div style={{ display: 'flex', gap: 10, alignItems: 'center' }} className="hidden-mobile">
             <a href={SPOTIFY} target="_blank" rel="noopener noreferrer" className="btn-sm-purple">
-              Listen Now <ExternalLink size={12} />
+              Stream <ExternalLink size={12} />
             </a>
             <button onClick={() => scrollTo('#booking')} className="btn-green glow-pulse"
                style={{ fontSize: '0.78rem', padding: '9px 18px' }}>
@@ -123,7 +124,7 @@ export default function Navbar() {
             transition={{ duration: 0.22 }}
             style={{
               position: 'fixed', top: 68, left: 0, right: 0, zIndex: 99,
-              background: 'rgba(5,11,24,0.98)', backdropFilter: 'blur(24px)',
+              background: 'rgba(8,8,18,0.98)', backdropFilter: 'blur(24px)',
               borderBottom: '1px solid var(--border)', padding: '24px',
               display: 'flex', flexDirection: 'column', gap: 20,
             }}

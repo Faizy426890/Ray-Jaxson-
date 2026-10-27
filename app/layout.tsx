@@ -1,37 +1,37 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
-const SITE_URL = 'https://kalmbeforethestorm.com'
+const SITE_URL = 'https://shatterlyfe.com'
 const DESCRIPTION =
-  'Kalm Before the Storm — conscious hip-hop artist, storyteller, and lyricist from St. Louis, Missouri. Stream Soul Searchin and explore the catalog.'
+  '$hatterLyfé — Melodic Rap artist from Portland, Oregon. Real stories of survival, loss, love, and finding music when drugs almost won. Stream on Spotify.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Kalm Before the Storm — Conscious Hip-Hop Artist',
+  title: '$hatterLyfé — Melodic Rap Artist',
   description: DESCRIPTION,
   keywords: [
-    'Kalm Before the Storm',
-    'K Carlton Allen',
-    'conscious hip-hop',
-    'St. Louis rapper',
-    'underground hip-hop',
-    'Soul Searchin',
-    'lyricist',
-    'storyteller',
+    '$hatterLyfé',
+    'ShatterLyfe',
+    'Jaxson',
+    'Melodic Rap',
+    'Portland Oregon rapper',
+    'underground rap',
+    'emotional rap',
+    'storytelling rap',
   ],
-  authors: [{ name: 'Kalm Before the Storm' }],
-  creator: 'Kalm Before the Storm',
+  authors: [{ name: '$hatterLyfé' }],
+  creator: '$hatterLyfé',
   alternates: { canonical: SITE_URL },
   openGraph: {
     type: 'website',
     url: SITE_URL,
-    title: 'Kalm Before the Storm — Conscious Hip-Hop Artist',
+    title: '$hatterLyfé — Melodic Rap Artist',
     description: DESCRIPTION,
-    siteName: 'Kalm Before the Storm',
+    siteName: '$hatterLyfé',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kalm Before the Storm — Conscious Hip-Hop Artist',
+    title: '$hatterLyfé — Melodic Rap Artist',
     description: DESCRIPTION,
   },
   robots: { index: true, follow: true },
@@ -40,16 +40,16 @@ export const metadata: Metadata = {
 const JSON_LD = {
   '@context': 'https://schema.org',
   '@type': 'MusicGroup',
-  name: 'Kalm Before the Storm',
-  alternateName: 'K Carlton Allen',
-  genre: ['Conscious Hip-Hop', 'Underground Hip-Hop'],
-  foundingLocation: { '@type': 'Place', name: 'St. Louis, Missouri, USA' },
+  name: '$hatterLyfé',
+  alternateName: 'Jaxson',
+  genre: ['Melodic Rap'],
+  foundingLocation: { '@type': 'Place', name: 'Portland, Oregon, USA' },
   url: SITE_URL,
-  email: 'kcsallen@gmail.com',
+  email: 'shatterlyfemusic@gmail.com',
   sameAs: [
-    'https://open.spotify.com/artist/7k9mgUyBa834ecy9zkKHHT',
-    'https://youtube.com/channel/UCaWb0_TsRAJIVJ7NXafWxBQ',
-    'https://instagram.com/kalmsyc1deep',
+    'https://open.spotify.com/artist/1Ixmx7vcuZ8hGyrRUslzhx',
+    'https://instagram.com/official.shatterlyfe',
+    'https://tiktok.com/@shatter_lyfe',
   ],
 }
 

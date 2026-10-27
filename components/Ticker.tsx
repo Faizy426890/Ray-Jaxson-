@@ -1,14 +1,16 @@
 'use client'
 
 const ITEMS = [
-  'Kalm Before the Storm · Conscious Hip-Hop',
-  'Soul Searchin · Out Now',
-  'Top 10 In Listens On Spinz 92.9',
-  'Excellent Review From MusicReviewWorld',
-  'St. Louis, Missouri · Storyteller · Lyricist',
-  'Stream On Spotify · YouTube',
-  'Upcoming Mixtape: Note 2 Self',
-  'Follow @kalmsyc1deep On Instagram',
+  '$hatterLyfé · Melodic Rap',
+  'First Day of Summer · Out Now',
+  'Physco · Stream on Spotify',
+  'Maybe · Out Now',
+  'AMG · On All Platforms',
+  'Weapon in da Coat · Stream Now',
+  'Portland, Oregon · Jaxson',
+  'Follow @official.shatterlyfe',
+  '@shatter_lyfe on TikTok',
+  '$hatterLyfé on SoundCloud & YouTube',
 ]
 
 export default function Ticker() {

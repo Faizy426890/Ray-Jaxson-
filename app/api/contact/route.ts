@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
-const BOOKING_TO = 'kcsallen@gmail.com'
+const BOOKING_TO = 'shatterlyfemusic@gmail.com'
 
 const esc = (v: unknown) =>
   String(v ?? '')
@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
       .filter(([, v]) => v)
       .map(
         ([k, v]) =>
-          `<tr><td style="padding:8px 12px;color:#7A8AA3;font-size:13px;white-space:nowrap;">${esc(k)}</td><td style="padding:8px 12px;color:#fff;font-size:14px;">${esc(v)}</td></tr>`,
+          `<tr><td style="padding:8px 12px;color:#A78BFA;font-size:13px;white-space:nowrap;">${esc(k)}</td><td style="padding:8px 12px;color:#fff;font-size:14px;">${esc(v)}</td></tr>`,
       )
       .join('')
 
@@ -55,12 +55,12 @@ export async function POST(req: NextRequest) {
       from: process.env.EMAIL_USER,
       to: BOOKING_TO,
       replyTo: email,
-      subject: subject || `Kalm Before the Storm — Booking Request from ${fullName}`,
+      subject: subject || `$hatterLyfé — Booking Request from ${fullName}`,
       html: `
-        <div style="font-family: sans-serif; max-width: 640px; margin: 0 auto; background: #091426; color: #fff; padding: 32px; border-radius: 16px;">
-          <h2 style="color: #60A5FA; margin: 0 0 8px;">New Booking Request</h2>
-          <p style="color:#BAC7D8; margin:0 0 20px; font-size:14px;">Kalm Before the Storm — kalmbeforethestorm.com</p>
-          <table style="width:100%; border-collapse:collapse; background:#0E1A31; border-radius:12px; overflow:hidden;">
+        <div style="font-family: sans-serif; max-width: 640px; margin: 0 auto; background: #0D0B1A; color: #fff; padding: 32px; border-radius: 16px;">
+          <h2 style="color: #A78BFA; margin: 0 0 8px;">New Booking Request</h2>
+          <p style="color:#C4B5FD; margin:0 0 20px; font-size:14px;">$hatterLyfé — shatterlyfe.com</p>
+          <table style="width:100%; border-collapse:collapse; background:#120F22; border-radius:12px; overflow:hidden;">
             ${rowsHtml}
           </table>
         </div>
