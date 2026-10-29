@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Reveal from './Reveal'
 import { IMG } from './media'
 
-const PROFILE = IMG.hero
+const PROFILE = 'https://res.cloudinary.com/geecu3mo/image/upload/v1793244905/WhatsApp_Image_2026-10-29_at_08.33.43.jpg'
 
 const SPOTIFY = 'https://open.spotify.com/artist/1Ixmx7vcuZ8hGyrRUslzhx?si=nSPwq2knRdSF-QkzO8umOQ'
 const INSTAGRAM = 'https://instagram.com/official.shatterlyfe'
@@ -92,16 +92,7 @@ export default function AboutSection() {
               <div style={{ position: 'relative', borderRadius: 22, overflow: 'hidden', aspectRatio: '4/3', border: '1px solid var(--border)', marginBottom: 20 }}>
                 <Image src={PROFILE} alt="$hatterLyfé" fill
                   style={{ objectFit: 'cover', objectPosition: 'center top' }} sizes="600px" />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(8,8,18,0.85) 0%, rgba(13,11,26,0.5) 45%, rgba(139,92,246,0.3) 100%)' }} />
-                <span className="badge badge-south" style={{ position: 'absolute', top: 12, left: 12 }}>Portland Artist</span>
-                <div style={{
-                  position: 'absolute', bottom: 12, right: 12,
-                  background: 'rgba(8,8,18,0.88)', backdropFilter: 'blur(14px)',
-                  border: '1px solid var(--border)', borderRadius: 14, padding: '12px 18px', textAlign: 'center',
-                }}>
-                  <p className="font-syne" style={{ fontWeight: 900, fontSize: '1rem', color: 'var(--accent-2)' }}>$hatterLyfé</p>
-                  <p style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>Real Name: Jaxson</p>
-                </div>
+                
               </div>
             </Reveal>
 
