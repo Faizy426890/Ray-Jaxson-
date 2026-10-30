@@ -28,8 +28,8 @@ const PLATFORMS = [
 
 const CARDS = [
   { icon: '💊', title: 'The Struggle', desc: 'By 14, Jaxson was an opioid addict and borderline alcoholic, caught in gang affiliation and a world that felt like it had no way out.' },
-  { icon: '🎵', title: 'The Salvation', desc: 'At 17, he chose music. Not as a career — as a lifeline. Every bar he wrote was a step away from where he had been and toward who he wanted to be.' },
-  { icon: '🚀', title: 'The Legacy', desc: 'Love was a big topic until music took over. Now love is a fantasy and music is the legacy — the one thing that saved him when nothing else could.' },
+  { icon: '🎵', title: 'The Salvation', desc: 'At 17, he chose music. Not as a career, but as a lifeline. Every bar he wrote was a step away from where he had been and toward who he wanted to be.' },
+  { icon: '🚀', title: 'The Legacy', desc: 'Love was a big topic until music took over. Now love is a fantasy and music is the legacy, the one thing that saved him when nothing else could.' },
 ]
 
 export default function AboutSection() {
@@ -52,7 +52,7 @@ export default function AboutSection() {
 
         {/* Main grid */}
         <div className="about-grid">
-          {/* Left — text */}
+          {/* Left: text */}
           <div>
             <Reveal direction="right">
               <span className="section-pill" style={{ display: 'inline-flex', marginBottom: 16 }}>🎤 The Story</span>
@@ -65,11 +65,11 @@ export default function AboutSection() {
 
             <div style={{ fontSize: '0.92rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
               {[
-                { d: 0.2, text: <>Born <strong style={{color:'#fff'}}>Jaxson</strong>, originally from <strong style={{color:'#fff'}}>Seattle, Washington</strong> — he moved to <strong style={{color:'#fff'}}>Oregon when he was 9</strong> years old, carrying everything a kid that age shouldn't have to carry.</> },
-                { d: 0.25, text: <>At <strong style={{color:'var(--accent-pink)'}}>10, he lost his mother</strong> — a loss that cracked the foundation of who he was. By <strong style={{color:'var(--accent-pink)'}}>14, he was deep in opioid addiction</strong> and borderline alcoholism, caught in <strong style={{color:'#fff'}}>gang affiliation and drug abuse</strong> with no clear exit.</> },
-                { d: 0.3, text: <>At <strong style={{color:'#fff'}}>17, he chose a different ending</strong>. He walked away from the drugs, the affiliation, and the destruction — and found music waiting where everything else had failed him.</> },
+                { d: 0.2, text: <>Born <strong style={{color:'#fff'}}>Jaxson</strong>, originally from <strong style={{color:'#fff'}}>Seattle, Washington</strong>. He moved to <strong style={{color:'#fff'}}>Oregon when he was 9</strong> years old, carrying everything a kid that age shouldn't have to carry.</> },
+                { d: 0.25, text: <>At <strong style={{color:'var(--accent-pink)'}}>10, he lost his mother</strong>, a loss that cracked the foundation of who he was. By <strong style={{color:'var(--accent-pink)'}}>14, he was deep in opioid addiction</strong> and borderline alcoholism, caught in <strong style={{color:'#fff'}}>gang affiliation and drug abuse</strong> with no clear exit.</> },
+                { d: 0.3, text: <>At <strong style={{color:'#fff'}}>17, he chose a different ending</strong>. He walked away from the drugs, the affiliation, and the destruction, and found music waiting where everything else had failed him.</> },
                 { d: 0.35, text: <><strong style={{color:'var(--accent-2)'}}>Love was a big topic</strong> at first, woven through his earliest bars. Then music consumed everything. <em style={{color:'var(--accent-2)'}}>Now love is a fantasy and music is the legacy he wants to leave behind.</em></> },
-                { d: 0.4, text: <><strong style={{color:'#fff'}}>"Music saved me when I didn't think anything ever would,"</strong> <span style={{color:'var(--text-muted)'}}>he says — and it continues to shape the person he's still becoming.</span></> },
+                { d: 0.4, text: <><strong style={{color:'#fff'}}>"Music saved me when I didn't think anything ever would,"</strong> <span style={{color:'var(--text-muted)'}}>he says, and it continues to shape the person he's still becoming.</span></> },
               ].map((item, i) => (
                 <Reveal key={i} direction="right" delay={item.d}>
                   <p style={{ marginBottom: 16 }}>{item.text}</p>
@@ -86,7 +86,7 @@ export default function AboutSection() {
             </Reveal>
           </div>
 
-          {/* Right — photo + stats */}
+          {/* Right: photo + stats */}
           <div>
             <Reveal direction="left" delay={0.1}>
               <div style={{ position: 'relative', borderRadius: 22, overflow: 'hidden', aspectRatio: '4/3', border: '1px solid var(--border)', marginBottom: 20 }}>
@@ -138,9 +138,9 @@ export default function AboutSection() {
               fontSize: 'clamp(1.2rem,2.5vw,1.8rem)', lineHeight: 1.4,
               color: '#fff', margin: '0 0 12px', fontStyle: 'italic',
             }}>
-              "Music saved me when I didn't think anything ever would — and it's continued to help me create the person I want to be."
+              "Music saved me when I didn't think anything ever would, and it's continued to help me create the person I want to be."
             </blockquote>
-            <p style={{ color: 'var(--accent-2)', fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: '0.9rem' }}>— Jaxson · $hatterLyfé</p>
+            <p style={{ color: 'var(--accent-2)', fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: '0.9rem' }}>Jaxson · $hatterLyfé</p>
           </div>
         </Reveal>
 

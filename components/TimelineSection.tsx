@@ -2,12 +2,12 @@
 import Reveal from './Reveal'
 
 const EVENTS = [
-  { tag: 'The Beginning', icon: '🌧️', title: 'Born in Seattle, Washington', desc: 'Jaxson enters the world in Seattle, WA — a city known for its rain, its music scene, and its complex streets.', upcoming: false },
-  { tag: 'Age 9', icon: '🌲', title: 'Moved to Oregon', desc: 'The family relocates to Oregon. A new state, new surroundings — but the weight of home stays heavy.', upcoming: false },
-  { tag: 'Age 10', icon: '💔', title: 'Lost His Mother', desc: 'At 10 years old, Jaxson loses his mother. The wound that never fully closes — the loss that lives in every bar he writes.', upcoming: false },
+  { tag: 'The Beginning', icon: '🌧️', title: 'Born in Seattle, Washington', desc: 'Jaxson enters the world in Seattle, WA, a city known for its rain, its music scene, and its complex streets.', upcoming: false },
+  { tag: 'Age 9', icon: '🌲', title: 'Moved to Oregon', desc: 'The family relocates to Oregon. A new state, new surroundings, but the weight of home stays heavy.', upcoming: false },
+  { tag: 'Age 10', icon: '💔', title: 'Lost His Mother', desc: 'At 10 years old, Jaxson loses his mother. The wound that never fully closes, the loss that lives in every bar he writes.', upcoming: false },
   { tag: 'Age 14', icon: '💊', title: 'Addiction & Gang Affiliation', desc: 'By 14, Jaxson is deep in opioid addiction and borderline alcoholism, caught in gang life with no clear exit in sight.', upcoming: false },
-  { tag: 'Age 17', icon: '🚪', title: 'Chose a Different Ending', desc: 'At 17, he walks away — from the drugs, the affiliation, the destruction. He finds music waiting where everything else had failed.', upcoming: false },
-  { tag: 'The Present', icon: '🎵', title: 'Music Over Everything', desc: 'Love was a big topic until music took its place. Now music is the legacy — the coping, the healing, the mission. Five tracks and counting.', upcoming: true },
+  { tag: 'Age 17', icon: '🚪', title: 'Chose a Different Ending', desc: 'At 17, he walks away from the drugs, the affiliation, the destruction. He finds music waiting where everything else had failed.', upcoming: false },
+  { tag: 'The Present', icon: '🎵', title: 'Music Over Everything', desc: 'Love was a big topic until music took its place. Now music is the legacy, the coping, the healing, the mission. Five tracks and counting.', upcoming: true },
 ]
 
 export default function TimelineSection() {
@@ -27,7 +27,7 @@ export default function TimelineSection() {
           </Reveal>
           <Reveal direction="up" delay={0.15}>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', maxWidth: 480, margin: '0 auto', lineHeight: 1.7 }}>
-              A life that could have gone a dozen different ways — and the one where music won.
+              A life that could have gone a dozen different ways, and the one where music won.
             </p>
           </Reveal>
         </div>
