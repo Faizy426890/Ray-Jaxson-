@@ -12,7 +12,7 @@ const QUOTES = [
     color: '#8B5CF6',
   },
   {
-    quote: 'Now I Inject Music In My Veins Instead of Drugs.',
+    quote: 'I used to chase highs. Now I chase sounds.',
     context: 'Swapping one dependency for the only one worth having.',
     icon: '💊',
     color: '#EC4899',
