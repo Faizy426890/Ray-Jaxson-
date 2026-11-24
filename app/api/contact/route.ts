@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
-const BOOKING_TO = 'faizytexh@gmail.com'
+const BOOKING_TO = 'shatterlyfemusic@gmail.com'
 
 const esc = (v: unknown) =>
   String(v ?? '')
